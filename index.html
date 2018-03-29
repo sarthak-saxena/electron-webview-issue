@@ -2,18 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Accessibility Test</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
+    <h1>Level 1 - Main Page</h1>
+    <div id="container" style="width: 550px; height: 425px;">
+      <button aria-label="Level 1 Button" aria-describedby="level1label">Click me</button>
+	  <input type="text" aria-label="Level 1 Input" />
+    <label id="level1label">Level 1 label</label>
+    <br />
+    <br />
+    <webview id="jim_view" style="width: 500px; height: 350px; border: solid green 2px" src="./level2.html">
+    </div>
+    
   </body>
 </html>
